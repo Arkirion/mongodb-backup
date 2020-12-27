@@ -24,22 +24,23 @@ http://www.3braintechnologies.com/scheduled-database-backup-and-upload-to-google
     * Note : you have to be careful with env variables in windows 10, add mongo and database-tools to the PATH
       https://www.architectryan.com/2018/08/31/how-to-change-environment-variables-on-windows-10/
 
-      example for Mongo
+      - example for Mongo
       `C:\Program Files\MongoDB\Server\4.4\bin`
-      example for database-tools
+      - example for database-tools
       `C:\Program Files\MongoDB\mongodb-database-tools-windows-x86_64-100.2.1\bin` 
 
 
 ## INDEX
 
-  2. Without library, just exec
+  1. [Without library, just exec](./exec/main.js)
     * configure parameters
     * you could use node-cron here if you want
     * node main.js
 
-  1. Using node-cron and spawn
-    * npm i node-cron
-    * configure hour and minute parameters to run
-    * node main.js
+  2. [Using node-cron,fs-extra(to move the backup) and spawn](./spawn/main.js)
+    * npm install
+    * configure parameters
+    * `node main.js` to run
+
 
 
